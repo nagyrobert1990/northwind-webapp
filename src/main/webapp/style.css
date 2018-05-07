@@ -1,0 +1,10 @@
+table {
+   border-collapse: separate;
+   width: 100%;
+   border: 1px solid gray;
+   table-layout: auto;
+   empty-cells: hide;
+}
+td {
+   border: 1px solid gray;
+}
