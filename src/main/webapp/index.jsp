@@ -2,16 +2,33 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!doctype html>
 <html lang="en">
-<head>
-    <title>Northwind WebApp</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<h1>Tasks:</h1>
-    <a href="task1">Task 1</a><br>
-    <a href="task2">Task 2</a><br>
-    <a href="task3">Task 3</a><br>
-    <a href="task4">Task 4</a><br>
-    <a href="task5">Task 5</a><br>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="index.js"></script>
+        <script src="login.js"></script>
+        <script src="logout.js"></script>
+        <script src="profile.js"></script>
+        <script src="logout.js"></script>
+
+         <title>PA-WebApp</title>
+    </head>
+    <body>
+        <div id="login-content" class="content">
+            <h1>Login</h1>
+            <form id="login-form" onsubmit="return false;">
+                <input type="text" id="customerId">
+                <button id="login-button">Login</button>
+            </form>
+        </div>
+        <div id="profile-content" class="hidden content">
+            <h1>Profile</h1>
+            <p>Company name: <span id="company-name"></span></p>
+        </div>
+        <div id="logout-content" class="hidden content">
+            <button id="logout-button">Logout</button>
+        </div>
+
+    </body>
 </html>

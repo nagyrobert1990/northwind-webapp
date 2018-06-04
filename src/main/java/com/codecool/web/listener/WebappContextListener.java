@@ -21,6 +21,7 @@ public final class WebappContextListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent sce) {
         registerCharacterEncodingFilter(sce);
         DataSource dataSource = putDataSourceToServletContext(sce);
+        runDatabaseInitScript(dataSource, "init.sql");
     }
 
     private void registerCharacterEncodingFilter(ServletContextEvent sce) {
@@ -43,7 +44,7 @@ public final class WebappContextListener implements ServletContextListener {
             */
             Context initCtx = new InitialContext();
             Context envCtx = (Context) initCtx.lookup("java:comp/env");
-            DataSource dataSource = (DataSource) envCtx.lookup("jdbc/northwind-webapp");
+            DataSource dataSource = (DataSource) envCtx.lookup("jdbc/PA-webapp");
             ServletContext servletCtx = sce.getServletContext();
             servletCtx.setAttribute("dataSource", dataSource);
             return dataSource;

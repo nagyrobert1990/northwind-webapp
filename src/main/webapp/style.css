@@ -1,10 +1,11 @@
-table {
-   border-collapse: separate;
-   width: 100%;
-   border: 1px solid gray;
-   table-layout: auto;
-   empty-cells: hide;
+.error {
+    color: red;
 }
-td {
-   border: 1px solid gray;
+
+.info {
+    color: blue;
+}
+
+.hidden {
+    display: none;
 }
